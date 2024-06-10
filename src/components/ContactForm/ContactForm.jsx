@@ -12,7 +12,6 @@ const InputSchema = Yup.object().shape({
 });
 
 const ContactForm = () => {
-
     const dispatch = useDispatch()
 
     const handleSubmit = (values, actions) => {

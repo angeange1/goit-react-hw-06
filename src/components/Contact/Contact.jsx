@@ -6,22 +6,14 @@ import { deleteContact } from "../../redux/contactsSlice";
 
 const Contact = ({ data: { name, number, id }}) => {
     const dispatch = useDispatch()
-
     return (
     <>
         <div className={css.details}>
-            <p>
-                <span><svg><FaUser /></svg></span>
-                {name}
-            </p>
-            <p>
-                <span><svg><FaPhoneAlt /></svg></span>
-                {number}
-            </p>
+            <p><span><svg><FaUser /></svg></span>{name}</p>
+            <p><span><svg><FaPhoneAlt /></svg></span>{number}</p>
         </div>
         <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
-    </>
-    )
+    </>)
 }
 
 export default Contact
